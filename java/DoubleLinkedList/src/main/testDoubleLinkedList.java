@@ -12,7 +12,9 @@ public class testDoubleLinkedList {
 		
 		dList.addFirst(new DoubleNode("C",null,null));
 		
-		dList.addFirst(new DoubleNode("D",null,null));
+		dList.addLast(new DoubleNode("D - adicionado no fim",null,null));
+		
+		dList.addLast(new DoubleNode("E - adicionado no fim",null,null));
 		
 		dList.percorreListaDoInicio();
 		

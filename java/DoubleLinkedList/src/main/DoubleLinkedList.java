@@ -23,6 +23,17 @@ public class DoubleLinkedList {
 		auxiliar.setPrevious(novoNodo);
 		this.size++;
 	}
+	
+	public void addLast(DoubleNode novoNodo) {
+		System.out.println("adicionando o nodo: "+novoNodo);
+		DoubleNode auxiliar = this.fim.getPrevious();
+		this.fim.setPrevious(novoNodo);
+		novoNodo.setNext(this.fim);
+		novoNodo.setPrevious(auxiliar);
+		auxiliar.setNext(novoNodo);
+		this.size++;
+		
+	}
 
 	public DoubleNode getInicio() {
 		return inicio;
