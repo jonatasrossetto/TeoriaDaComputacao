@@ -16,6 +16,8 @@ public class testDoubleLinkedList {
 		
 		dList.percorreListaDoInicio();
 		
+		dList.percorreListaDoFim();
+		
 		
 
 	}

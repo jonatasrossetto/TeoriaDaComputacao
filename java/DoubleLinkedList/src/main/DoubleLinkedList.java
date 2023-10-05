@@ -68,7 +68,7 @@ public class DoubleLinkedList {
 	}
 	
 	public void percorreListaDoInicio() {
-		System.out.println("Numero de elementos: "+ this.size);
+		System.out.println("\nNumero de elementos: "+ this.size);
 		DoubleNode auxiliar = this.inicio;
 		for (int inc=0;inc<size+2;inc++) {
 			System.out.println("elemento:"+auxiliar.getElemento());
@@ -76,6 +76,15 @@ public class DoubleLinkedList {
 		}
 	}
 	
+	public void percorreListaDoFim() {
+		
+		System.out.println("\nNumero de elementos: "+ this.size);
+		DoubleNode auxiliar = this.fim;
+		for (int inc=0;inc<size+2;inc++) {
+			System.out.println("elemento:"+auxiliar.getElemento());
+			auxiliar=auxiliar.getPrevious();
+		}
+	}
 	
 	
 }
