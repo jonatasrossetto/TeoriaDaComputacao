@@ -17,7 +17,7 @@ public class QuicksortExperiment1 {
 ////			System.out.println("lista["+i+"]: "+listaNumeros[i]);
 //		}
 
-		imprimeVetor(listaNumeros);
+		System.out.println(listaNumeros);
 		QuickSort(listaNumeros);
 
 	}
@@ -28,6 +28,7 @@ public class QuicksortExperiment1 {
 		int indiceDireita = vetor.size() - 1;
 		long pivot = vetor.get(indiceEsquerda);
 		System.out.println("pivot= " + pivot);
+		System.out.println(vetor.size());
 
 		while (indiceEsquerda <= indiceDireita) {
 
@@ -52,9 +53,12 @@ public class QuicksortExperiment1 {
 				System.out.println("Swap, Esquerda: " + indiceEsquerda + " Direita: " + indiceDireita);
 				vetor = swapElements(vetor, indiceEsquerda, indiceDireita);
 			}
-			imprimeVetor(vetor);
+			System.out.println(vetor);
 		}
 		System.out.println("Fim, Esquerda: " + indiceEsquerda + " Direita: " + indiceDireita);
+		
+		System.out.println(vetor.subList(0, indiceEsquerda));
+		System.out.println(vetor.subList(indiceDireita+1, vetor.size()));
 
 		
 		
@@ -67,18 +71,12 @@ public class QuicksortExperiment1 {
 		return vetor;
 	}
 
-	public static void imprimeVetor(List<Long> vetor) {
-		// imprime os elementos de vetor
-		for (int ii = 0; ii < vetor.size(); ii++) {
-			System.out.print(" [" + vetor.get(ii) + "] ");
-		}
-		System.out.println("");
-	}
+	
 
 	public static List<Long> swapElements(List<Long> vetor, int indiceA, int indiceB) {
-		var temp = vetor.get(indiceA);
+		var temp = vetor.get(indiceB);
 		vetor.set(indiceB, vetor.get(indiceA));
-		vetor.set(indiceA, vetor.get(indiceB));
+		vetor.set(indiceA, temp);
 		return vetor;
 
 	}
